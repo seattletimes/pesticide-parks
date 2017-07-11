@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <%= t.include("partials/_head.html", grunt.data.json) %>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+
+    <responsive-child>
+      <main class="interactive">
+        <h1>Pesticides in Seattle parks</h1>
+        <div class="chatter">
+          This map contains information on pesticide usage in developed parks over the past 10 years. Click on a park to see the total gallons of pesticides, the gallons of products containing Tier 1 pesticides, and gallons of products containing glyphosate-based pesticides sprayed each year. Enter an address to find information on a park near you.
+        </div>
+        <div class="mapContainer">
+          <div class="nav">
+            <button class="layer button pesticide">
+              <div class="key-container">
+                <div class="key"><div class="tile"><div class="swatch" style="background: #C78300"></div>Pesticides used</div></div>
+              </div>
+            </button>
+            <button class="layer button pesticideFree">
+              <div class="key-container">
+              <div class="key"><div class="tile"><div class="swatch" style="background: #57986f"></div>Pesticide-free</div></div>
+            </div>
+            </button>
+            <button class="button geocode">
+              <div class="key-container">
+                <div class="key"><div class="tile">Go!</div></div>
+              </div>
+            </button>
+            <input class="address-input" type="text" placeholder=" Enter address here">
+          </div>
+          <leaflet-map>
+            <tile-layer layer="cartoPositron">
+            </tile-layer>
+          </leaflet-map>
+          <div class="source"> 
+          <i>Source: Seattle Department of Parks and Recreation </i><br>
+          Note: Sprayings displayed occurred between January 2007 and May 2017. The figures do not represent the amount of active ingredient, but rather the sum of products applied. Measurements not containing units were converted to gallons by The Seattle Times.
+        </div>
+          <div class="credit">
+            ELLIS SIMANI / THE SEATTLE TIMES
+          </div>
+        </div>
+      </main>
+    </responsive-child>
+
+    <script>
+      window.pesticideData = <%= JSON.stringify(csv.cleaned2) %>;
+    </script>
+    <script src="app.js" async></script>
+    <% if (json.project.production) { %>
+    <%= !json.project.embedded ? t.include("partials/_analytics.html") : "" %>
+    <%= t.include("partials/_workHere.html") %>
+    <% } %>
+  </body>
+</html>

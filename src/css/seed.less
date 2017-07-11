@@ -1,0 +1,173 @@
+@import "seattletimes";
+.interactive {
+  max-width: 700px;
+  margin: auto;
+}
+.interactive h1 {
+  text-align: center;
+  @media @mobile {
+    font-size: 25px;
+  }
+}
+.interactive .address-input {
+  line-height: 19px;
+  @media @mobile {
+    width: 200px;
+  }
+}
+.interactive .mapContainer {
+  margin: auto;
+  max-width: 75vh;
+}
+.interactive .mapContainer .nav {
+  margin: auto;
+  max-width: 75vh;
+  @media @mobile {
+    max-width: 50vh;
+    margin: auto;
+    padding-left: 20px;
+  }
+}
+.interactive .button {
+    background-color: @df-middle-gray;
+    border: none;
+    padding: 5px 8px;
+    padding-right: 1px;
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 5px;
+    margin-bottom: 5px;
+    text-align: center;
+
+    &.inactive, &[disabled] {
+      background: @df-light-gray;
+      color: @df-middle-gray;
+      border: 1px dashed @df-dark-gray;
+    }
+}
+.interactive .button:hover {
+  outline: 1px solid @df-blue;
+}
+.interactive .key-container .key {
+  display: inline-block;
+  padding-right: 10px;
+}
+.interactive .key-container .tile {
+  font-size: 13px;
+  @media @mobile {
+    font-size: 13px;
+  }
+}
+.interactive .key-container .swatch {
+  display: inline-block;
+  margin-right: 5px;
+  height: 10px;
+  width: 10px;
+}
+.interactive .key-container .icon {
+  margin-right: 5px;
+  // height: 10px;
+  // width: 10px;
+}
+.interactive .source {
+  padding-top: 10px;
+  font-size: 11.5px;
+  color: #7e838b;
+}
+.interactive .credit {
+  font-size: 11.5px;
+  color: #7e838b;
+}
+.interactive .chatter {
+  font-size: 16px;
+  font-family: "ff-dagny-web-pro", Helvetica Neue, Helvetica, sans-serif;
+  padding-bottom: 15px;
+  text-align: center;
+
+  @media @mobile {
+    font-size: 15px;
+  }
+}
+leaflet-map {
+  height: 75vh;
+  width: 75vh;
+
+  @media @mobile {
+    max-width: 50vh;
+    margin: auto;
+  }
+
+  .park-marker {
+    background: #C78300;
+    border-radius: 100%;
+    border: 1px solid white;
+    opacity: .4;
+    box-shadow: none;
+
+    &.pf {
+      background: #137037;
+      box-shadow: 0px 0px 5px #00A941;
+      opacity: .8;
+
+    }
+  }
+}
+
+.leaflet-popup-content-wrapper {
+  border-radius: 0;
+}
+
+.leaflet-popup.park-detail .leaflet-popup-content {
+  font-style: @df-serif;
+  margin: 5px;
+
+  h1 {
+    color: black;
+    font-size: 17px;
+    font-family: @df-sans;
+    margin-bottom: 3px;
+    text-align: left;
+  }
+  p {
+    margin: 0px;
+  }
+  table {
+    border-collapse: collapse;
+    width: 200px;
+    margin: 0px;
+  }
+
+  th, td {
+      text-align: center;
+      padding: 3px;
+  }
+
+  th {
+    white-space:nowrap;
+  }
+
+  tr:nth-child(even){background-color: #f2f2f2}
+  tr:nth-child(odd){background-color: @df-off-white}
+
+  th {
+      background-color: @df-middle-gray;
+      color: @df-off-white;
+  }
+  }
+
+  .leaflet-popup.park-detailPF .leaflet-popup-content {
+    font-style: @df-serif;
+    margin: 5px;
+    max-width: 200px;
+    h1 {
+      color: black;
+      font-size: 17px;
+      font-family: @df-sans;
+      margin-bottom: 3px;
+      text-align: left;
+    }
+    div {
+      font-style: italic;
+    }
+    }
