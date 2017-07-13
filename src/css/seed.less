@@ -1,113 +1,144 @@
 @import "seattletimes";
+
+@toxic: #C78300;
+@safe: #137037;
+
 .interactive {
-  max-width: 700px;
+  max-width: 630px;
   margin: auto;
 }
-.interactive h1 {
-  text-align: center;
+
+h1 {
+  margin-top: 0;
+
   @media @mobile {
     font-size: 25px;
   }
 }
-.interactive .address-input {
-  line-height: 19px;
-  @media @mobile {
-    width: 200px;
-  }
-}
-.interactive .mapContainer {
-  margin: auto;
-  max-width: 75vh;
-}
-.interactive .mapContainer .nav {
-  margin: auto;
-  max-width: 75vh;
-  @media @mobile {
-    max-width: 50vh;
-    margin: auto;
-    padding-left: 20px;
-  }
-}
-.interactive .button {
-    background-color: @df-middle-gray;
-    border: none;
-    padding: 5px 8px;
-    padding-right: 1px;
-    color: white;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 5px;
-    margin-bottom: 5px;
-    text-align: center;
 
-    &.inactive, &[disabled] {
-      background: @df-light-gray;
-      color: @df-middle-gray;
-      border: 1px dashed @df-dark-gray;
-    }
+.mapContainer {
+  margin: auto;
+  max-width: 75vh;
 }
-.interactive .button:hover {
-  outline: 1px solid @df-blue;
-}
-.interactive .key-container .key {
-  display: inline-block;
-  padding-right: 10px;
-}
-.interactive .key-container .tile {
-  font-size: 13px;
+
+.nav {
+  .display-flex();
+  .justify-content(space-between);
+
   @media @mobile {
-    font-size: 13px;
+    display: block;
+  }
+
+  .section {
+    margin-bottom: 5px;
+
+    @media @mobile {
+      .display-flex();
+      .justify-content(space-between);
+      .align-items(stretch);
+
+      input {
+        .flex(1 1 75%);
+      }
+    }
   }
 }
-.interactive .key-container .swatch {
+
+.button {
+  background-color: @df-middle-gray;
+  border: none;
+  padding: 5px 16px;
+  color: white;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+  cursor: pointer;
+
+  &.inactive, &[disabled] {
+    background: @df-light-gray;
+    color: @df-middle-gray;
+    border: 1px dashed @df-dark-gray;
+  }
+
+  &:hover:not(.inactive) {
+    background: darken(@df-middle-gray, 10%);
+  }
+}
+
+.swatch {
   display: inline-block;
   margin-right: 5px;
   height: 10px;
   width: 10px;
+  border-radius: 100%;
+  border: 1px solid white;
+
+  &.toxic { background: @toxic }
+  &.safe { background: @safe }
 }
-.interactive .key-container .icon {
+
+.icon {
   margin-right: 5px;
   // height: 10px;
   // width: 10px;
 }
-.interactive .source {
+
+.aspect-container {
+  position: relative;
+  margin: 16px 0;
+
+  &::before {
+    content: "";
+    display: block;
+    padding-bottom: 100%;
+
+    @media @mobile {
+      // padding-bottom: 75%;
+    }
+  }
+
+  leaflet-map {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.source, .note {
   padding-top: 10px;
-  font-size: 11.5px;
-  color: #7e838b;
+  font-size: 14px;
 }
-.interactive .credit {
-  font-size: 11.5px;
-  color: #7e838b;
+
+.credit {
+  font-size: 14px;
+  text-align: right;
+  margin-top: 8px;
 }
-.interactive .chatter {
+
+.chatter {
   font-size: 16px;
   font-family: "ff-dagny-web-pro", Helvetica Neue, Helvetica, sans-serif;
   padding-bottom: 15px;
-  text-align: center;
 
   @media @mobile {
     font-size: 15px;
   }
 }
-leaflet-map {
-  height: 75vh;
-  width: 75vh;
 
-  @media @mobile {
-    max-width: 50vh;
-    margin: auto;
-  }
+leaflet-map { 
 
   .park-marker {
-    background: #C78300;
+    background: @toxic;
     border-radius: 100%;
     border: 1px solid white;
     opacity: .4;
     box-shadow: none;
 
     &.pf {
-      background: #137037;
-      box-shadow: 0px 0px 5px #00A941;
+      background: @safe;
+      box-shadow: 0px 0px 5px lighten(@safe, 20%);
       opacity: .8;
 
     }
@@ -159,23 +190,23 @@ leaflet-map {
     max-width: 225px;
     padding-bottom: 5px;
   }
-  }
+}
 
-  .leaflet-popup.park-detail-noSprayings .leaflet-popup-content {
-    font-style: @df-serif;
-    margin: 5px;
-    max-width: 200px;
-    h1 {
-      color: black;
-      font-size: 17px;
-      font-family: @df-sans;
-      margin-bottom: 3px;
-      text-align: left;
-    }
-    p {
-      display: none;
-    }
-    table {
-      display: none;
-    }
+.leaflet-popup.park-detail-noSprayings .leaflet-popup-content {
+  font-style: @df-serif;
+  margin: 5px;
+  max-width: 200px;
+  h1 {
+    color: black;
+    font-size: 17px;
+    font-family: @df-sans;
+    margin-bottom: 3px;
+    text-align: left;
   }
+  p {
+    display: none;
+  }
+  table {
+    display: none;
+  }
+}

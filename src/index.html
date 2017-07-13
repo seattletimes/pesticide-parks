@@ -14,31 +14,33 @@
         </div>
         <div class="mapContainer">
           <div class="nav">
-            <button class="layer button pesticide">
-              <div class="key-container">
-                <div class="key"><div class="tile"><div class="swatch" style="background: #C78300"></div>Pesticides used</div></div>
-              </div>
-            </button>
-            <button class="layer button pesticideFree">
-              <div class="key-container">
-              <div class="key"><div class="tile"><div class="swatch" style="background: #57986f"></div>Pesticide-free</div></div>
+            <div class="layers section">
+              <button class="layer button pesticide">
+                <div class="swatch toxic"></div>
+                Pesticides used
+              </button>
+              <button class="layer button pesticideFree">
+                <div class="swatch safe"></div>
+                Pesticide-free
+              </button>
             </div>
-            </button>
-            <button class="button geocode">
-              <div class="key-container">
-                <div class="key"><div class="tile">Go!</div></div>
-              </div>
-            </button>
-            <input class="address-input" type="text" placeholder=" Enter address here">
+            <div class="geocoding section">
+              <input class="address-input" type="text" placeholder=" Enter address here">
+              <button class="button geocode">Go!</button>
+            </div>
           </div>
-          <leaflet-map>
-            <tile-layer layer="cartoPositron">
-            </tile-layer>
-          </leaflet-map>
+          <div class="aspect-container">
+            <leaflet-map>
+              <tile-layer layer="cartoPositron">
+              </tile-layer>
+            </leaflet-map>
+          </div>
           <div class="source">
-          <i>Source: Seattle Department of Parks and Recreation </i><br>
-          Note: Sprayings displayed occurred between January 2007 and May 2017. The figures do not represent the amount of active ingredient, but rather the sum of products applied. Measurements not listed in gallons were converted by The Seattle Times.
-        </div>
+            Source: Seattle Department of Parks and Recreation
+          </div>
+          <div class="note">
+            Note: Sprayings displayed occurred between January 2007 and May 2017. The figures do not represent the amount of active ingredient, but rather the sum of products applied. Measurements not listed in gallons were converted by The Seattle Times.
+          </div>
           <div class="credit">
             ELLIS SIMANI / THE SEATTLE TIMES
           </div>
