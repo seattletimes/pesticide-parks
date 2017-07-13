@@ -154,9 +154,16 @@ leaflet-map {
       background-color: @df-middle-gray;
       color: @df-off-white;
   }
+
+  div {
+    max-width: 225px;
+    font-style: italic;
+    padding-bottom: 3px;
+
+  }
   }
 
-  .leaflet-popup.park-detailPF .leaflet-popup-content {
+  .leaflet-popup.park-detail-noSprayings .leaflet-popup-content {
     font-style: @df-serif;
     margin: 5px;
     max-width: 200px;
@@ -170,4 +177,7 @@ leaflet-map {
     div {
       font-style: italic;
     }
+    table {
+      display: none;
     }
+  }

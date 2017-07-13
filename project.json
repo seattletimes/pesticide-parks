@@ -2,7 +2,7 @@
   "s3": {
     "stage": {
       "bucket": "projects-staging.seattletimes.com",
-      "path": ""
+      "path": "woody-thinker"
     },
     "live": {
       "bucket": "projects.seattletimes.com",
@@ -16,5 +16,5 @@
   "sheets": [],
   "standout": false,
   "embedded": true,
-  "production": false
+  "production": true
 }

@@ -27,7 +27,8 @@ window.pesticideData.forEach(function(row) {
       address: row.Address,
       pf: row.PF,
       incidents: [],
-      byYear: {}
+      byYear: {},
+      noSprayings: row.NoSprayings
     };
   }
   var location = parks[row.Location];
@@ -51,12 +52,13 @@ for (var p in parks) {
       className: "park-marker" + (isFree ? " pf" : " toxic")
     })
   });
+  var noSpray = park.noSprayings > 0;
   marker.data = park;
   marker.on("click", e => console.log(e.target.data));
   marker.addTo(isFree ? markerLayerPF : markerLayer);
   if (park.pf == 0) marker.bindPopup(popupTemplate({ name: p, park }), { className: "park-detail" });
-  if (park.pf == 1) marker.bindPopup(popupTemplate2({ name: p, park }), { className: "park-detailPF" });
-  if (park.pf == 2) marker.bindPopup(popupTemplate3({ name: p, park }), { className: "park-detailPF" });
+  if (park.pf == 1) marker.bindPopup(popupTemplate2({ name: p, park }), { className: (noSpray ? "park-detail-noSprayings" : "park-detail") });
+  if (park.pf == 2) marker.bindPopup(popupTemplate3({ name: p, park }), { className: (noSpray ? "park-detail-noSprayings" : "park-detail") });
 }
 
 markerLayer.addTo(map);

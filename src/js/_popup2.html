@@ -1,2 +1,20 @@
 <h1><%= data.name %></h1>
-<div>This is one of the original 14 parks in the Pesticide-free Parks Program that have been pesticide-free since 2001.</div>
+<div>This is one of the original 14 parks in the Pesticide-free Parks Program that was launched in 2001.</div>
+<table>
+    <tr>
+      <th>Year</th>
+      <th>Total</th>
+      <th>Tier 1</th>
+      <th>Glyphosate</th>
+      <th>Sprayings</th>
+    </tr>
+    <% Object.keys(data.park.byYear).sort().forEach(function(y) { %>
+    <tr>
+      <td><strong><%= y %></strong></td>
+      <td><%= data.park.byYear[y].sum < 0.1 ? "< 0.1" : data.park.byYear[y].sum.toFixed(1) %></td>
+      <td><%= data.park.byYear[y].tierOne < 0.1 ? "< 0.1" : data.park.byYear[y].tierOne.toFixed(1) %></td>
+      <td><%= data.park.byYear[y].sumGly < 0.1 ? "< 0.1" : data.park.byYear[y].sumGly.toFixed(1) %></td>
+      <td><%= data.park.byYear[y].count %></td>
+    </tr>
+  <% }); %>
+</table>
