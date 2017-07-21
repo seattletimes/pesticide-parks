@@ -1,7 +1,9 @@
 @import "seattletimes";
 
 @toxic: #C78300;
-@safe: #137037;
+@safe: #0008ff;
+@pseudo: #756bb1;
+@highlyToxic: #bb0606;
 
 .interactive {
   max-width: 630px;
@@ -16,6 +18,20 @@ h1 {
   }
 }
 
+.key {
+  font-size: 13px;
+  .display-flex();
+  .align-items(flex-start);
+
+  .border {
+    padding-right: 15px;
+  }
+
+  @media @mobile {
+    display: block;
+  }
+}
+
 .mapContainer {
   margin: auto;
   max-width: 75vh;
@@ -23,7 +39,37 @@ h1 {
 
 .nav {
   .display-flex();
-  .justify-content(space-between);
+  .align-items(flex-start);
+
+  @media @mobile {
+    display: none;
+  }
+
+  .section {
+    margin-bottom: 5px;
+
+      input {
+        .flex(1 1 75%);
+      }
+    }
+
+  input[type="checkbox"] {
+    display: none;
+
+    & + label {
+      background: @df-light-gray;
+      color: @df-middle-gray;
+    }
+
+    &:checked + label {
+      background: @df-middle-gray;
+      color: white;
+    }
+  }
+}
+
+.navMobile {
+  display: none;
 
   @media @mobile {
     display: block;
@@ -32,15 +78,28 @@ h1 {
   .section {
     margin-bottom: 5px;
 
-    @media @mobile {
-      .display-flex();
-      .justify-content(space-between);
-      .align-items(stretch);
-
       input {
         .flex(1 1 75%);
       }
     }
+
+  input[type="checkbox"] {
+    display: none;
+
+    & + label {
+      background: @df-light-gray;
+      color: @df-middle-gray;
+    }
+
+    &:checked + label {
+      background: @df-middle-gray;
+      color: white;
+    }
+  }
+
+  .search {
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
@@ -53,6 +112,15 @@ h1 {
   display: inline-block;
   text-align: center;
   cursor: pointer;
+  font-size: 14px;
+  height: 25px;
+
+  @media @mobile {
+    padding: 2px 20px;
+    font-size: 16px;
+    text-align: center;
+    margin-bottom: 10px;
+  }
 
   &.inactive, &[disabled] {
     background: @df-light-gray;
@@ -62,6 +130,11 @@ h1 {
 
   &:hover:not(.inactive) {
     background: darken(@df-middle-gray, 10%);
+  }
+
+  &.geocode {
+    padding: 4px;
+    height: 23px;
   }
 }
 
@@ -75,6 +148,8 @@ h1 {
 
   &.toxic { background: @toxic }
   &.safe { background: @safe }
+  &.highly-toxic { background: @highlyToxic}
+  &.pseudoPF { background: @pseudo}
 }
 
 .icon {
@@ -112,7 +187,7 @@ h1 {
 }
 
 .credit {
-  font-size: 14px;
+  font-size: 13px;
   text-align: right;
   margin-top: 8px;
 }
@@ -127,7 +202,7 @@ h1 {
   }
 }
 
-leaflet-map { 
+leaflet-map {
 
   .park-marker {
     background: @toxic;
@@ -138,15 +213,30 @@ leaflet-map {
 
     &.pf {
       background: @safe;
+      border: 1px solid white;
       box-shadow: 0px 0px 5px lighten(@safe, 20%);
       opacity: .8;
+    }
 
+    &.high {
+      background: @highlyToxic;
+      box-shadow: 0px 0px 5px lighten(@highlyToxic, 20%);
+      opacity: .9;
+      border: 1px solid white;
+    }
+
+    &.pseudoPF {
+      background: @pseudo;
+      box-shadow: 0px 0px 5px lighten(@pseudo, 2%);
+      opacity: .8;
+      border: 1px solid white;
     }
   }
 }
 
 .leaflet-popup-content-wrapper {
   border-radius: 0;
+  padding: 4px;
 }
 
 .leaflet-popup.park-detail .leaflet-popup-content {
@@ -190,6 +280,10 @@ leaflet-map {
     max-width: 225px;
     padding-bottom: 5px;
   }
+
+  div.notSprayed {
+    display: none;
+  }
 }
 
 .leaflet-popup.park-detail-noSprayings .leaflet-popup-content {
@@ -208,5 +302,9 @@ leaflet-map {
   }
   table {
     display: none;
+  }
+  div.notSprayed {
+    margin-top: 5px;
+    font-style: italic;
   }
 }

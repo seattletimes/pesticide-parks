@@ -11,9 +11,9 @@
     <% Object.keys(data.park.byYear).sort().forEach(function(y) { %>
     <tr>
       <td><strong><%= y %></strong></td>
-      <td><%= data.park.byYear[y].sum < 0.1 ? "< 0.1" : data.park.byYear[y].sum.toFixed(1) %></td>
-      <td><%= data.park.byYear[y].tierOne < 0.1 ? "< 0.1" : data.park.byYear[y].tierOne.toFixed(1) %></td>
-      <td><%= data.park.byYear[y].sumGly < 0.1 ? "< 0.1" : data.park.byYear[y].sumGly.toFixed(1) %></td>
+      <td><%= data.park.byYear[y].sum == 0 ? "0" : data.park.byYear[y].sum < 0.1 ? "< 0.1" : data.park.byYear[y].sum.toFixed(1) %></td>
+      <td><%= data.park.byYear[y].tierOne == 0 ? "0" : data.park.byYear[y].tierOne < 0.1 ? "< 0.1" : data.park.byYear[y].tierOne.toFixed(1) %></td>
+      <td><%= data.park.byYear[y].sumGly == 0 ? "0" : data.park.byYear[y].sumGly < 0.1 ? "< 0.1" : data.park.byYear[y].sumGly.toFixed(1) %></td>
       <td><%= data.park.byYear[y].count %></td>
     </tr>
   <% }); %>
