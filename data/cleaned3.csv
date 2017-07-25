@@ -508,7 +508,7 @@ ApplicationID,DeptName,Program,DateOfApplication,Year,Glyphosate,Tier1,QtyApplie
 14325,Parks and Recreation,Unspecified,09/04/2008,2008,Y,N,Gal(s),2.5,2.5,Longfellow Creek,Unknown,47.530167,-122.363435,0,0
 14326,Parks and Recreation,Unspecified,09/04/2008,2008,Y,N,Gal(s),1,1,Delridge Playfield,4555 Delridge Way SW,47.56284245,-122.3643707,0,0
 14327,Parks and Recreation,Unspecified,09/04/2008,2008,Y,N,Gal(s),1,1,Lincoln Park,7367 47th Ave SW,47.531177,-122.396012,0,0
-14328,Parks and Recreation,Unspecified,10/14/2008,2008,Y,N,Fl. Oz,8,0.0625,Fairmount Playground,5400 Fauntleroy Way SW,47.553013,-122.38161,2,1
+14328,Parks and Recreation,Unspecified,10/14/2008,2008,Y,N,Fl. Oz,8,0.0625,Fairmount Playground,5400 Fauntleroy Way SW,47.553877,-122.381011,2,1
 14329,Parks and Recreation,Unspecified,10/02/2008,2008,Y,N,Fl. Oz,8,0.0625,Lincoln Park,7367 47th Ave SW,47.531177,-122.396012,0,0
 14399,Parks and Recreation,Unspecified,10/01/2008,2008,N,Y,Gal(s),400,400,West Seattle Golf,4470 35th Ave SW,47.561954,-122.3762,0,0
 14400,Parks and Recreation,Unspecified,10/21/2008,2008,N,Y,Lb(s),48,5.755395696,West Seattle Golf,4470 35th Ave SW,47.561954,-122.3762,0,0
@@ -832,7 +832,7 @@ ApplicationID,DeptName,Program,DateOfApplication,Year,Glyphosate,Tier1,QtyApplie
 14923,Parks and Recreation,Unspecified,09/24/2009,2009,Y,N,Gal(s),3.5,3.5,South Park Playground,738 S Sullivan St,47.520795,-122.323649,0,0
 14924,Parks and Recreation,Unspecified,09/24/2009,2009,Y,N,Gal(s),3,3,Oxbow Park,6430 Corson Ave S,47.54499,-122.321583,0,0
 14925,Parks and Recreation,Unspecified,09/23/2009,2009,Y,N,Gal(s),1,1,Magnolia Manor Park,3430 27th Ave W,47.651373,-122.390983,0,0
-14926,Parks and Recreation,Unspecified,09/23/2009,2009,Y,N,Fl. Oz,10,0.078125,Fairmount Playground,5400 Fauntleroy Way SW,47.553013,-122.38161,2,1
+14926,Parks and Recreation,Unspecified,09/23/2009,2009,Y,N,Fl. Oz,10,0.078125,Fairmount Playground,5400 Fauntleroy Way SW,47.553877,-122.381011,2,1
 14927,Parks and Recreation,Unspecified,09/23/2009,2009,Y,N,Gal(s),1.5,1.5,West Seattle Stadium Park,4432 35th Ave SW,47.5651,-122.37618,0,0
 14928,Parks and Recreation,Unspecified,09/23/2009,2009,Y,N,Gal(s),1,1,Solstice Park,7400 Fauntleroy Way SW,47.536413,-122.390347,0,0
 14929,Parks and Recreation,Unspecified,09/23/2009,2009,Y,N,Gal(s),2,2,Lincoln Park,7367 47th Ave SW,47.531177,-122.396012,0,0
@@ -1205,7 +1205,7 @@ ApplicationID,DeptName,Program,DateOfApplication,Year,Glyphosate,Tier1,QtyApplie
 15804,Parks and Recreation,Developed Park,09/14/2010,2010,Y,N,Gal(s),1.5,1.5,Hamilton Viewpoint,1531 California Ave SW,47.59074752,-122.3890697,0,0
 15805,Parks and Recreation,Developed Park,09/14/2010,2010,Y,N,Gal(s),4.5,4.5,Hamilton Viewpoint,1531 California Ave SW,47.59074752,-122.3890697,0,0
 15806,Parks and Recreation,Developed Park,09/14/2010,2010,Y,N,Gal(s),1,1,Alki Beach Park,2701 Alki Ave SW,47.588867,-122.39486,0,0
-15807,Parks and Recreation,Developed Park,11/04/2010,2010,N,N,Gal(s),0.5,0.5,Fairmount Playground,5400 Fauntleroy Way SW,47.553013,-122.38161,2,1
+15807,Parks and Recreation,Developed Park,11/04/2010,2010,N,N,Gal(s),0.5,0.5,Fairmount Playground,5400 Fauntleroy Way SW,47.553877,-122.381011,2,1
 15808,Parks and Recreation,Developed Park,11/04/2010,2010,Y,N,Gal(s),1.5,1.5,Cormorant Cove Park,3701 Beach Dr SW,47.570984,-122.412089,0,0
 15809,Parks and Recreation,Developed Park,11/04/2010,2010,Y,N,Gal(s),3,3,West Seattle Stadium Park,4432 35th Ave SW,47.5651,-122.37618,0,0
 15810,Parks and Recreation,Developed Park,11/04/2010,2010,Y,N,Gal(s),2,2,Hiawatha Playfield,2700 California Ave SW,47.57827243,-122.3849647,0,0
@@ -1400,7 +1400,7 @@ ApplicationID,DeptName,Program,DateOfApplication,Year,Glyphosate,Tier1,QtyApplie
 16060,Parks and Recreation,Developed Park,08/11/2011,2011,Y,N,Gal(s),2,2,Delridge Playfield,4555 Delridge Way SW,47.562842,-122.364371,0,0
 16061,Parks and Recreation,Developed Park,08/11/2011,2011,Y,N,Gal(s),2,2,Cottage Grove Park,5206 26th Ave SW,47.556046,-122.36555,0,0
 16062,Parks and Recreation,Developed Park,08/11/2011,2011,Y,N,Gal(s),2,2,Delridge Playfield,4555 Delridge Way SW,47.56284245,-122.3643707,0,0
-16064,Parks and Recreation,Developed Park,09/21/2011,2011,Y,N,Gal(s),1.5,1.5,Fairmount Playground,5400 Fauntleroy Way SW,47.553013,-122.38161,2,1
+16064,Parks and Recreation,Developed Park,09/21/2011,2011,Y,N,Gal(s),1.5,1.5,Fairmount Playground,5400 Fauntleroy Way SW,47.553877,-122.381011,2,1
 16065,Parks and Recreation,Developed Park,09/21/2011,2011,Y,N,Gal(s),1,1,Morgan Junction Park,,47.545781,-122.387537,0,0
 16067,Parks and Recreation,Developed Park,11/10/2011,2011,Y,N,Gal(s),6,6,Judkins Park & Playfield,2150 S Norman St,47.593094,-122.30365,0,0
 16068,Parks and Recreation,Developed Park,11/10/2011,2011,Y,N,Gal(s),4,4,Pratt Park,1800 S Main St,47.600705,-122.307463,0,0
