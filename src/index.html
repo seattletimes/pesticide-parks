@@ -16,7 +16,7 @@
           <div class="key">
             <div class="border">
               <div class="swatch safe"></div>
-              Pesticide-free (not sprayed)
+              Pesticide-free 
             </div>
             <div class="border">
               <div class="swatch pseudoPF"></div>
@@ -81,7 +81,7 @@
     </responsive-child>
 
     <script>
-      window.pesticideData = <%= JSON.stringify(csv.cleaned3) %>;
+      window.pesticideData = <%= JSON.stringify(json.cleaned3) %>;
     </script>
     <script src="app.js" async></script>
     <% if (json.project.production) { %>
