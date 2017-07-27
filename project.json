@@ -6,12 +6,12 @@
     },
     "live": {
       "bucket": "projects.seattletimes.com",
-      "path": ""
+      "path": "2017/investigation/pesticides-in-parks"
     }
   },
-  "title": "",
-  "description": "",
-  "url": "",
+  "title": "Pesticides in Seattle parks",
+  "description": "Seattle sprays thousands of gallons of pesticide mixes each year in parks, playfields and other grounds around the city. Click on a site to see a summary of pesticide sprayings over the past decade.",
+  "url": "http://projects.seattletimes.com/2017/investigation/pesticides-in-parks/",
   "image": "assets/social.jpg",
   "sheets": ["1omuyHf__rHIMIcbBUaWJY78yNm_HGlH_ZC3UEA280E8"],
   "standout": false,
